@@ -148,3 +148,28 @@
 #define C51WH12 "------'|oOo|=[]=-      ||      ||      |  ||=======_|__"
 #define C51WH13 "/~\\____|___|/~\\_|  O=======O=======O   |__|+-/~\\_|     "
 #define C51WH14 "\\_/         \\_/  \\____/  \\____/  \\____/      \\_/       "
+
+#define PEPPERHIGHT    18
+#define PEPPERLENGTH   87
+#define PEPPERPATTERNS  1
+
+#define PEPPERDEL "                    "
+
+#define PEPPER01 "         _____      "
+#define PEPPER02 "        / .   \\     "
+#define PEPPER03 "       ( @  @ ()    "
+#define PEPPER04 "        \\ u   /     "
+#define PEPPER05 "        _|___|__    "
+#define PEPPER06 "       /+------+\\   "
+#define PEPPER07 "      / |pepper| \\  "
+#define PEPPER08 " J___/ /+------+\\ ) "
+#define PEPPER09 " E____/  \\_____/ /  "
+#define PEPPER10 "         /    / /   "
+#define PEPPER11 "        /\\___<WW\\   "
+#define PEPPER12 "        |       |   "
+#define PEPPER13 "         \\     /    "
+#define PEPPER14 "          \\___|     "
+#define PEPPER15 "          |.  .\\    "
+#define PEPPER16 "        _/ u    \\_  "
+#define PEPPER17 "       / \\  _  /  \\ "
+#define PEPPER18 "       \\_|_/ \\_|__/ "

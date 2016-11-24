@@ -45,6 +45,7 @@ void add_smoke(int y, int x);
 void add_man(int y, int x);
 int add_C51(int x);
 int add_D51(int x);
+int add_Pepper(int x);
 int add_sl(int x);
 void option(char *str);
 int my_mvaddstr(int y, int x, char *str);
@@ -53,6 +54,7 @@ int ACCIDENT  = 0;
 int LOGO      = 0;
 int FLY       = 0;
 int C51       = 0;
+int PEPPER    = 0;
 
 int my_mvaddstr(int y, int x, char *str)
 {
@@ -73,6 +75,7 @@ void option(char *str)
             case 'F': FLY      = 1; break;
             case 'l': LOGO     = 1; break;
             case 'c': C51      = 1; break;
+	    case 'p': PEPPER   = 1; break;
             default:                break;
         }
     }
@@ -101,6 +104,9 @@ int main(int argc, char *argv[])
         }
         else if (C51 == 1) {
             if (add_C51(x) == ERR) break;
+        }
+        else if (PEPPER == 1) {
+            if (add_Pepper(x) == ERR) break;
         }
         else {
             if (add_D51(x) == ERR) break;
@@ -232,6 +238,24 @@ int add_C51(int x)
         add_man(y + 3, x + 49);
     }
     add_smoke(y - 1, x + C51FUNNEL);
+    return OK;
+}
+
+int add_Pepper(int x)
+{
+    static char *pepper[PEPPERPATTERNS][PEPPERHIGHT + 1]
+        = {{PEPPER01, PEPPER02, PEPPER03, PEPPER04, PEPPER05, PEPPER06,
+            PEPPER07, PEPPER08, PEPPER09, PEPPER10, PEPPER11, PEPPER12,
+            PEPPER13, PEPPER14, PEPPER15, PEPPER16, PEPPER17, PEPPER18, PEPPERDEL}};
+    
+    int y, i, dy = 0;
+
+    if (x < - PEPPERLENGTH)  return ERR;
+    y = LINES / 2 - 5;
+
+    for (i = 0; i <= PEPPERHIGHT; ++i) {
+        my_mvaddstr(y + i, x, pepper[(PEPPERLENGTH + x) % PEPPERPATTERNS][i]);
+    }
     return OK;
 }
 
